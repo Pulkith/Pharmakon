@@ -1,0 +1,19 @@
+
+
+.login-wrapper {
+    background-color: var(--main-black);
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    font-family: googleRegular;
+    letter-spacing: 0.03em;
+
+    .content {
+        .header {
+            display: block;
+        }
+        .loginform {
+            display: block;
+        }
+    }
+}

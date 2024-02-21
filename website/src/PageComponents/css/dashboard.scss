@@ -1,0 +1,31 @@
+.dashboard-wrapper {
+    font-family: googleRegular;
+}
+.comparewrapper {
+    width: 100%;
+}
+
+.upload-wapper {
+    .uploadfullwrapper {
+        width: 100%;
+    }
+}
+
+.compare-wrapper {
+    .lefthalfcols {
+        border-right: 1px solid gray;
+        
+    }
+    .righthalfcols {
+        padding-left: 10px;
+    }
+    .nopat {
+        color: rgb(225, 225, 225, 0.5)
+    }
+}
+
+.tablex {
+    overflow-y:scroll;
+    height:300px;
+    display:block;   
+}

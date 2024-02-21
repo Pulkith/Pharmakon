@@ -1,0 +1,2 @@
+﻿subject_id,hadm_id,micro_specimen_id,order_provider_id,chartdate,charttime,spec_itemid,spec_type_desc,test_seq,storedate,storetime,test_itemid,test_name,org_itemid,org_name,isolate_num
+10004749,28691602,8397114,,2127-04-05 00:00:00,2127-04-05 03:56:00,70064,STOOL,6,2127-04-05 00:00:00,2127-04-05 14:20:00,90212,CLOSTRIDIUM DIFFICILE TOXIN A & B TEST,80139,CLOSTRIDIUM DIFFICILE,1
