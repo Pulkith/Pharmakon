@@ -66,8 +66,6 @@ from langchain.chat_models import ChatOpenAI
 
 def get_genresponse(curr_patient_path, ehr_path):
 
-  OPENAI_KEY = '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'
-
   curr_loader = CSVLoader(file_path=curr_patient_path, encoding="utf-8", csv_args={
                   'delimiter': ','})
   curr_data = curr_loader.load()
