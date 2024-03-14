@@ -52,7 +52,7 @@ function PersonPicker(props) {
     for(var i = 0; i < patientData.length; i++) {
         arr.push({id: i, name: patientData[i][0]})
     }
-    // setPeople(arr.splice(1));
+    setPeople(arr.splice(1));
     }
     
   }, [patientData]);

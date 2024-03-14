@@ -48,7 +48,7 @@ const Login = () => {
                                         <div className="textwhite fs20">Sign in with your system credentials</div>
                                     </div>
                                     <TextField id="outlined-basic" label="Key" variant="outlined" sx={{width:350}} className="mtop10" />
-                                    <TextField id="outlined-basic" label="Password" variant="outlined" sx={{width:350}} className="mtop10" />
+                                    <TextField id="outlined-basic" type="password" label="Password" variant="outlined" sx={{width:350}} className="mtop10" />
                                     <button className="btn btn-primary textwhite fs125 mtop10 btnhovermovearrow" onClick={() => handleLogin()}>Login <EastIcon className="movearrowright" /></button>'
                                 </div>
                             </div>

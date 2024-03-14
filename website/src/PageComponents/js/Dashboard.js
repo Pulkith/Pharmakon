@@ -12,6 +12,11 @@ import {TextWithDividers, TextWithDividersEqual, PersonPicker} from './UtilCompo
 import Database from './Database.js';
 
 const Dashboard = () => {
+
+    const rotate = (log) => {
+        window.location.href = '/Compare';
+    }
+
     return (
         <div className="dashboard-wrapper">
             <div className="max-contentwrapper">
@@ -28,7 +33,7 @@ const Dashboard = () => {
                                 <TextWithDividers text="Compare"></TextWithDividers>
                                 <div className="centervertwrapper">
                                     <div className="mtop200 maxwidth">
-                                        <PersonPicker />
+                                        <PersonPicker onC={rotate}/>
                                         <div className="centerwrapper mtop10 mbottom50">Choose an existing patient to view and edit</div>
                                         
                                         <TextWithDividersEqual text="OR"></TextWithDividersEqual>

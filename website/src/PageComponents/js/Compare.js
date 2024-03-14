@@ -52,17 +52,26 @@ const Compare = () => {
     }, []);
 
     const newMessage = (msg, user) => {
-        setTexts([...texts, {msg, user},])
+        setTexts(texts => [...texts, {msg, user},])
     }
 
     const handleMsg = () => {
-        newMessage(document.getElementById('txtinput').value, 'User')
+      newMessage(document.getElementById('txtinput').value, 'User')
         const data = { data: { query: document.getElementById('txtinput').value}}
         const query = document.getElementById('txtinput').value;
         axios.post('http://127.0.0.1:5000/receive-chatbot', {query}).then(r => {
-          console.log(r.data)
-          newMessage(r.data.answer + " \n Similar patients are: " + r.data.similar_patients ,'AI')
+          newMessage(r.data.answer, 'AI');
+          newMessage("Similar patients are: " + r.data.similar_patients ,'AI')
         })
+    }
+
+    const handleSwitch = () => {
+      console.log(texts)
+      let text = texts[texts.length - 2].msg
+      console.log(text)
+      axios.post('http://127.0.0.1:5000/translate', {text}).then(r => {
+        newMessage(r.data.response, 'AI')
+      })
     }
 
     useEffect(() => {
@@ -354,6 +363,8 @@ const Compare = () => {
                                 <div className="mtop20">
                                     <input type="text" id="txtinput" placeholder="Type here" className="input input-bordered w-full" style={{width: "94%", marginRight: "10px"}} /><button className="btn btn-success" onClick={handleMsg}>Send</button>
                                 </div>
+                                <button className="btn btn-secondary mtop10" onClick={handleSwitch}>Translate to Spanish</button>
+
 
                                 <div className="ts150 mtop50 ">Chat Messages:</div>
                                 <div className="texts mtop10" style={{paddingTop: "10px", paddingBottom: "20px"}}>

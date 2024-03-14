@@ -8,8 +8,6 @@ import pandas as pd
 
 import settings
 
-OPENAI_KEY = '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'
-
 # App title
 st.set_page_config(page_title="Chatbot", initial_sidebar_state="collapsed") 
 col1, col2, col3 = st.columns(3)

@@ -8,8 +8,6 @@ from flask import request
 from flask_cors import CORS, cross_origin
 import os
 
-os.environ['OPENAI_API_KEY']  = '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'
-
 tokenizer = Wav2Vec2Tokenizer.from_pretrained('facebook/wav2vec2-base-960h')
 model = Wav2Vec2ForCTC.from_pretrained('facebook/wav2vec2-base-960h')
 app = Flask(__name__)
@@ -139,6 +137,12 @@ def chatbot():
     ans, sim_patients = bot(query)
     print("???")
     return {"answer": ans, "similar_patients": sim_patients}
+
+@app.route('/translate', methods=['POST'])
+def transler():
+    query = request.json['text']
+    response = translate_text(query, "es")
+    return {"response": response }
 
 @app.route('/get-chatbot-response', methods=['GET'])
 @cross_origin(supports_credentials=True)

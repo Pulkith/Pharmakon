@@ -10,8 +10,6 @@ from scipy.spatial.distance import cdist
 
 import settings
 
-OPENAI_KEY = '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'
-
 # hide footer
 hide_streamlit_style = """
             <style>
